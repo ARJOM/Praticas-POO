@@ -1,14 +1,20 @@
 package models;
 
+import models.Produto;
+
 public class Cartao {
 
     private float pontos;
     private String tipo;
+    private float acumulo;
+    private float desconto;
 
-    public Cartao(String tipo){
+    public Cartao(String tipo, float acumulo, float desconto){
 
         this.pontos = 0;
         this.tipo = tipo;
+        this.acumulo = acumulo;
+        this.desconto = desconto;
 
     }
 
@@ -25,29 +31,20 @@ public class Cartao {
     }
 
     public float acumulaPontos(float compra){
-        int real = Integer.parseInt(compra)
-        if (tipo == "azul"){
-            pontos += 1.5*real;
-            return  1.5*real;
-        } else if (tipo == "branco"){
-            pontos += real;
-            return real;
-        }
-        return 0;
+        int real = (int) compra;
+        float acumulada = acumulo*real;
+        pontos += acumulada;
+        return acumulada;
     }
 
     public float trocaPontos(Produto produto){
         float custo = produto.getValorPontos();
         if (pontos >= custo){
-            if (produto.emPromocao()){
-                if (tipo == "branco"){
-                    custo *= 0.95;
-                } else if (tipo == "azul"){
-                    custo *= 0.9;
-                }
+            if (produto.isPromocao()){
+                custo *= desconto;
             }
             pontos -= custo;
-            return custo
+            return custo;
         }
         return 0;
     }
