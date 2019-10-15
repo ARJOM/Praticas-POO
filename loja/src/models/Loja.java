@@ -2,6 +2,6 @@ package models;
 
 public class Loja {
 
-    private
+    private String nome;
 
 }
