@@ -5,10 +5,10 @@ public class Produto {
     private long codigo;
     private String descricao;
     private float valor;
-    private float valorPontos;
+    private int valorPontos;
     private boolean promocao;
 
-    public Produto(long codigo, String descricao, float valor, float valorPontos, boolean promocao) {
+    public Produto(long codigo, String descricao, float valor, int valorPontos, boolean promocao) {
         this.codigo = codigo;
         this.descricao = descricao;
         this.valor = valor;
@@ -40,11 +40,11 @@ public class Produto {
         this.valor = valor;
     }
 
-    public float getValorPontos() {
+    public int getValorPontos() {
         return valorPontos;
     }
 
-    public void setValorPontos(float valorPontos) {
+    public void setValorPontos(int valorPontos) {
         this.valorPontos = valorPontos;
     }
 
@@ -55,5 +55,5 @@ public class Produto {
     public void setPromocao(boolean promocao) {
         this.promocao = promocao;
     }
-    
+
 }

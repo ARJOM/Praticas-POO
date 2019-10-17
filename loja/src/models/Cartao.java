@@ -1,7 +1,5 @@
 package models;
 
-import models.Produto;
-
 public class Cartao {
 
     private float pontos;

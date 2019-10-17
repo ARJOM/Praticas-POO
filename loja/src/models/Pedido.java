@@ -7,9 +7,9 @@ public class Pedido  {
 
     private Cliente cliente;
     private LocalDate data;
-    private Array produtos;
+    private ItemPedido produtos;
 
-    public Pedido(Cliente cliente, LocalDate data, Array produtos) {
+    public Pedido(Cliente cliente, LocalDate data, ItemPedido produtos) {
         this.cliente = cliente;
         this.data = data;
         this.produtos = produtos;
@@ -31,11 +31,12 @@ public class Pedido  {
         this.data = data;
     }
 
-    public Array getProdutos() {
-        return produtos;
-    }
 
-    public void setProdutos(Array produtos) {
-        this.produtos = produtos;
-    }
+
+    //Métodos adicionais
+
+//    public void addProduto(Produto produto){
+//        produtos.append(produto);
+//    }
+
 }
