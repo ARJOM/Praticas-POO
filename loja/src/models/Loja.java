@@ -47,4 +47,17 @@ public class Loja {
         }
         return false;
     }
+
+//    public Produto remProduto(int codigo){
+      public boolean remProduto(int codigo){
+        for (int i = 0; i<produtos.length; i++) {
+            if (produtos[i].getCodigo() == codigo) {
+//                Produto produto = produtos[i];
+                produtos[i] = null;
+//                return produto;
+                return true;
+            }
+        }
+        return false;
+    }
 }
