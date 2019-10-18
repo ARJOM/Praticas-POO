@@ -27,5 +27,24 @@ public class Loja {
     public void setClientes(Cliente[] clientes) {
         this.clientes = clientes;
     }
-    
+
+    public boolean addPoduto(Produto produto){
+        for (int i = 0; i<produtos.length; i++){
+            if(produtos[i] == null){
+                produtos[i] = produto;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean addCliente(Cliente cliente){
+        for (int i = 0; i<clientes.length; i++){
+            if (clientes[i]==null){
+                clientes[i] = cliente;
+                return true;
+            }
+        }
+        return false;
+    }
 }
