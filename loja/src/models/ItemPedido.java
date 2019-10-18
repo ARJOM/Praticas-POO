@@ -35,4 +35,10 @@ public class ItemPedido {
     public void setPrecoUnitario(float precoUnitario) {
         this.precoUnitario = precoUnitario;
     }
+
+    //Métodos adicionais
+    public float getSubtotal(){
+        return precoUnitario*quantidade;
+    }
+
 }

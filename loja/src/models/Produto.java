@@ -2,13 +2,13 @@ package models;
 
 public class Produto {
 
-    private long codigo;
+    private int codigo;
     private String descricao;
     private float valor;
     private int valorPontos;
     private boolean promocao;
 
-    public Produto(long codigo, String descricao, float valor, int valorPontos, boolean promocao) {
+    public Produto(int codigo, String descricao, float valor, int valorPontos, boolean promocao) {
         this.codigo = codigo;
         this.descricao = descricao;
         this.valor = valor;
@@ -16,11 +16,11 @@ public class Produto {
         this.promocao = promocao;
     }
 
-    public long getCodigo() {
+    public int getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(long codigo) {
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 
