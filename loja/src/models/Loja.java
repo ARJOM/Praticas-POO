@@ -48,8 +48,7 @@ public class Loja {
         return false;
     }
 
-//    public Produto remProduto(int codigo){
-      public boolean remProduto(int codigo){
+    public boolean remProduto(int codigo){
         for (int i = 0; i<produtos.length; i++) {
             if (produtos[i].getCodigo() == codigo) {
 //                Produto produto = produtos[i];
@@ -70,4 +69,23 @@ public class Loja {
         }
         return false;
     }
+
+    public Produto getProduto(int codigo) {
+        for (int i = 0; i<produtos.length; i++){
+            if (produtos[i].getCodigo() == codigo){
+                return produtos[i];
+            }
+        }
+        return null;
+    }
+
+    public Cliente getCliente(String cpf) {
+        for (int i = 0; i<clientes.length; i++){
+            if (clientes[i].getCpf().equals(cpf)){
+                return clientes[i];
+            }
+        }
+        return null;
+    }
+
 }
