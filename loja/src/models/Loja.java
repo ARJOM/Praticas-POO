@@ -60,9 +60,9 @@ public class Loja {
         return false;
     }
 
-    public boolean remCliente(int cpf){
+    public boolean remCliente(String cpf){
         for (int i = 0; i<clientes.length; i++){
-            if(clientes[i].getCpf() == cpf){
+            if(clientes[i].getCpf().equals(cpf)){
                 clientes[i] = null;
                 return true;
             }
