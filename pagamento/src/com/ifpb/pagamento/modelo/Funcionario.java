@@ -1,15 +1,19 @@
 package com.ifpb.pagamento.modelo;
 
+import java.time.LocalDate;
+
 public abstract class Funcionario {
 
     private String cpf;
     private String nome;
     private float salario;
+    private LocalDate nascimento;
 
-    public Funcionario(String cpf, String nome, float salario){
+    public Funcionario(String cpf, String nome, float salario, LocalDate nascimento){
         this.cpf = cpf;
         this.nome = nome;
         this.salario = salario;
+        this.nascimento = nascimento;
     }
 
     public String getCpf() {

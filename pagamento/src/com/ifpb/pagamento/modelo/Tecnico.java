@@ -1,12 +1,14 @@
 package com.ifpb.pagamento.modelo;
 
+import java.time.LocalDate;
+
 public class Tecnico extends Funcionario {
 
     private String setor;
     private int horasExtras;
 
-    public Tecnico(String cpf, String nome, float salario, String setor, int horasExtras){
-        super(cpf, nome, salario);
+    public Tecnico(String cpf, String nome, float salario, LocalDate nascimento, String setor, int horasExtras){
+        super(cpf, nome, salario, nascimento);
         this.setor = setor;
         this.horasExtras = horasExtras;
     }
