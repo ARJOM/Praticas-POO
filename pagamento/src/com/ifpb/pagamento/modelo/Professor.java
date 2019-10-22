@@ -1,23 +1,25 @@
 package com.ifpb.pagamento.modelo;
 
+import com.ifpb.pagamento.enumerations.Titulacao;
+
 import java.time.LocalDate;
 
 public class Professor extends Funcionario {
 
-    private String titulacao;
+    private Titulacao titulacao;
     private int cargaHoraria;
 
-    public Professor(String cpf, String nome, float salario, LocalDate nascimento, String titulacao, int cargaHoraria){
+    public Professor(String cpf, String nome, float salario, LocalDate nascimento, Titulacao titulacao, int cargaHoraria){
         super(cpf, nome, salario, nascimento);
         this.titulacao = titulacao;
         this.cargaHoraria = cargaHoraria;
     }
 
-    public String getTitulacao() {
+    public Titulacao getTitulacao() {
         return titulacao;
     }
 
-    public void setTitulacao(String titulacao) {
+    public void setTitulacao(Titulacao titulacao) {
         this.titulacao = titulacao;
     }
 

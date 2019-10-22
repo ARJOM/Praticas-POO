@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="7c5adc79-3126-49fe-96db-33d9c9dee1b3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Loja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Loja.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pagamento/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pagamento/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pagamento/out/production/pagamento/com/ifpb/pagamento/modelo/Funcionario.class" beforeDir="false" afterPath="$PROJECT_DIR$/../pagamento/out/production/pagamento/com/ifpb/pagamento/modelo/Funcionario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pagamento/out/production/pagamento/com/ifpb/pagamento/modelo/Professor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../pagamento/out/production/pagamento/com/ifpb/pagamento/modelo/Professor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pagamento/out/production/pagamento/com/ifpb/pagamento/modelo/Tecnico.class" beforeDir="false" afterPath="$PROJECT_DIR$/../pagamento/out/production/pagamento/com/ifpb/pagamento/modelo/Tecnico.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pagamento/out/production/pagamento/com/ifpb/pagamento/visao/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../pagamento/out/production/pagamento/com/ifpb/pagamento/visao/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pagamento/src/com/ifpb/pagamento/modelo/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pagamento/src/com/ifpb/pagamento/modelo/Professor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pagamento/src/com/ifpb/pagamento/visao/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pagamento/src/com/ifpb/pagamento/visao/App.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +72,11 @@
       <workItem from="1571134955736" duration="1508000" />
       <workItem from="1571159495045" duration="4799000" />
       <workItem from="1571310686999" duration="2557000" />
-      <workItem from="1571387654048" duration="3077000" />
+      <workItem from="1571387654048" duration="3216000" />
+      <workItem from="1571416108701" duration="3257000" />
+      <workItem from="1571652828939" duration="156000" />
+      <workItem from="1571675935947" duration="283000" />
+      <workItem from="1571750181493" duration="25000" />
     </task>
     <servers />
   </component>
