@@ -1,15 +1,20 @@
 package models;
 
 import java.lang.ref.Cleaner;
+import java.util.Arrays;
 
 public class Loja {
 
     private Produto[] produtos;
+    private int quantidadeProdutos;
     private Cliente[] clientes;
+    private int quantidadeCLientes;
 
     public Loja() {
-        this.produtos = new Produto[10];
-        this.clientes = new Cliente[10];
+        produtos = new Produto[10];
+        quantidadeProdutos = 0;
+        clientes = new Cliente[10];
+        quantidadeCLientes = 0;
     }
 
     public Produto[] getProdutos() {
@@ -29,31 +34,36 @@ public class Loja {
     }
 
     public boolean addPoduto(Produto produto){
-        for (int i = 0; i<produtos.length; i++){
-            if(produtos[i] == null){
-                produtos[i] = produto;
-                return true;
-            }
+        if (quantidadeProdutos == produtos.length){
+            produtos = Arrays.copyOf(produtos, produtos.length+10);
         }
-        return false;
+        if(getProduto(produto.getCodigo())!=null){
+            return false;
+        } else {
+            produtos[quantidadeProdutos++] = produto;
+            return true;
+        }
     }
 
     public boolean addCliente(Cliente cliente){
-        for (int i = 0; i<clientes.length; i++){
-            if (clientes[i]==null){
-                clientes[i] = cliente;
-                return true;
-            }
+        if (quantidadeCLientes == clientes.length){
+            clientes = Arrays.copyOf(clientes, clientes.length+10);
         }
-        return false;
+        if(getCliente(cliente.getCpf())!=null) {
+            return false;
+        } else{
+            clientes[quantidadeCLientes++] = cliente;
+            return true;
+        }
     }
 
     public boolean remProduto(int codigo){
-        for (int i = 0; i<produtos.length; i++) {
+        for (int i = 0; i<quantidadeProdutos; i++) {
             if (produtos[i].getCodigo() == codigo) {
-//                Produto produto = produtos[i];
-                produtos[i] = null;
-//                return produto;
+                for (int j=i; j<quantidadeProdutos-1; j++){
+                    produtos[j] = produtos[j+1];
+                }
+                quantidadeProdutos--;
                 return true;
             }
         }
@@ -61,9 +71,12 @@ public class Loja {
     }
 
     public boolean remCliente(String cpf){
-        for (int i = 0; i<clientes.length; i++){
+        for (int i = 0; i<quantidadeCLientes; i++){
             if(clientes[i].getCpf().equals(cpf)){
-                clientes[i] = null;
+                for (int j=i; j<quantidadeCLientes-1; j++){
+                    clientes[j] = clientes[j+1];
+                }
+                quantidadeCLientes--;
                 return true;
             }
         }
@@ -71,7 +84,7 @@ public class Loja {
     }
 
     public Produto getProduto(int codigo) {
-        for (int i = 0; i<produtos.length; i++){
+        for (int i = 0; i<quantidadeProdutos; i++){
             if (produtos[i].getCodigo() == codigo){
                 return produtos[i];
             }
@@ -80,7 +93,7 @@ public class Loja {
     }
 
     public Cliente getCliente(String cpf) {
-        for (int i = 0; i<clientes.length; i++){
+        for (int i = 0; i<quantidadeCLientes; i++){
             if (clientes[i].getCpf().equals(cpf)){
                 return clientes[i];
             }
